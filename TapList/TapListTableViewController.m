@@ -18,7 +18,6 @@
 @implementation TapListTableViewController
 
 - (void)viewDidLoad {
-    [self createArrays];
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -33,33 +32,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)createBeersArray {
-    Beer *twoHearted = [[Beer alloc]initWithBeerName:@"Two Hearted Ale" fromBrewery:@"Bell's Brewery" withStyle:@"IPA" withABV:7.0];
-    Beer *detroitDwarf = [[Beer alloc]initWithBeerName:@"Detroit Dwarf" fromBrewery:@"Old Nation Brewing Company" withStyle:@"Dunkel" withABV:5.5];
-    Beer *dirtyBastard = [[Beer alloc]initWithBeerName:@"Dirty Bastard" fromBrewery:@"Founders Brewing Company" withStyle:@"Scotch Ale" withABV:8.0];
-    _beers = [NSMutableArray arrayWithObjects:twoHearted, detroitDwarf, dirtyBastard, nil];
-}
-
-- (void)createWinesArray {
-    Wine *cabFranc = [[Wine alloc]initWithWineName:@"2013 Cabernet Franc" fromWinery:@"2 Lads" withStyle:@"Red"];
-    Wine *vintnersSelect = [[Wine alloc]initWithWineName:@"2013 Vintner's Select Riesling" fromWinery:@"Sandhill Crane Vineyards" withStyle:@"White"];
-    Wine *pinotGrigio = [[Wine alloc]initWithWineName:@"Pinot Grigio 2013" fromWinery:@"Leelanau Cellars" withStyle:@"White"];
-    _wines = [NSMutableArray arrayWithObjects:cabFranc, vintnersSelect, pinotGrigio, nil];
-}
-
-- (void)createArrays {
-    [self createBeersArray];
-    [self createWinesArray];
-}
-
-- (void)updateUIForOutOfStockItem {
-    
-}
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -138,7 +115,11 @@
 
 - (void)createAndAddBeerWithName:(NSString *)beerName fromBrewery:(NSString *)brewery ofStyle:(NSString *)style withABV:(float)abv {
     Beer *newBeer = [[Beer alloc]initWithBeerName:beerName fromBrewery:brewery withStyle:style withABV:abv];
-    [_beers addObject:newBeer];
+    if (_beers == NULL) {
+        _beers = [NSMutableArray arrayWithObject:newBeer];
+    } else {
+        [_beers addObject:newBeer];
+    }
     Beer *lastBeerInArray = [_beers lastObject];
     NSLog(@"New beer delegate method called. Beer %@ added to array", lastBeerInArray.name);
     [self.tableView reloadData];
@@ -146,7 +127,11 @@
 
 - (void)createAndAddWineWithName:(NSString *)wineName fromWinery:(NSString *)winery ofStyle:(NSString *)style {
     Wine *newWine = [[Wine alloc]initWithWineName:wineName fromWinery:winery withStyle:style];
-    [_wines addObject:newWine];
+    if (_wines == NULL) {
+        _wines = [NSMutableArray arrayWithObject:newWine];
+    } else {
+        [_wines addObject:newWine];
+    }
     Wine *lastWineInArray = [_wines lastObject];
     NSLog(@"New wine delegate method called. Wine %@ added to array", lastWineInArray.name);
     [self.tableView reloadData];

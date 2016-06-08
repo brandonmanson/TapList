@@ -17,9 +17,5 @@
 @property(strong, nonatomic)NSMutableArray *wines;
 @property(strong, nonatomic)NSMutableArray *pausedItems;
 
-- (void)createBeersArray;
-- (void)createWinesArray;
-- (void)createArrays;
-- (void)updateUIForOutOfStockItem;
 
 @end
