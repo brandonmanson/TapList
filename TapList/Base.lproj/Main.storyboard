@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BsN-bV-Fhd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="3RP-Nd-L2V">
+            <objects>
+                <tableViewController id="M5v-LS-Z7S" customClass="TapListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DfF-zo-KnH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="6Ba-v1-1Ga" detailTextLabel="NbG-Mp-TKN" style="IBUITableViewCellStyleSubtitle" id="Sdq-dr-0qH">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sdq-dr-0qH" id="zv1-ZH-ToY">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Ba-v1-1Ga">
+                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NbG-Mp-TKN">
+                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M5v-LS-Z7S" id="2Le-Yf-GFZ"/>
+                            <outlet property="delegate" destination="M5v-LS-Z7S" id="glP-A5-hSk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="MDY-nC-PUJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sK4-2r-kLi">
+                            <connections>
+                                <segue destination="4f9-F2-D3k" kind="push" identifier="addNewBeerOrWineSegue" id="4W6-WY-s8w"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Xg1-bo-FST" kind="push" identifier="beerDetailSegue" id="qfb-Qb-JRz"/>
+                        <segue destination="90q-xd-E5h" kind="push" identifier="wineDetailSegue" id="5Tf-Wl-Irz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ie-gv-xKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="306"/>
+        </scene>
+        <!--Create Beer Or Wine View Controller-->
+        <scene sceneID="5Xe-r3-I7g">
+            <objects>
+                <viewController id="4f9-F2-D3k" customClass="CreateBeerOrWineViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CNN-F3-YkQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="V7z-zp-9xe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tuO-Qp-rLb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7bd-vH-zJF">
+                                <rect key="frame" x="72" y="91" width="176" height="29"/>
+                                <segments>
+                                    <segment title="Beer"/>
+                                    <segment title="Wine"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlPressed:" destination="4f9-F2-D3k" eventType="valueChanged" id="MSC-jV-zSV"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PPc-nS-8hv">
+                                <rect key="frame" x="43" y="147" width="235" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Brewery/Winery Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nz2-bC-usD">
+                                <rect key="frame" x="43" y="211" width="235" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEn-19-5Kx">
+                                <rect key="frame" x="145" y="489" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addNewDrinkButtonPressed:" destination="4f9-F2-D3k" eventType="touchUpInside" id="YDw-EY-JqJ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Style" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ef-Re-VeS">
+                                <rect key="frame" x="43" y="270" width="235" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ABV" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNi-Ek-wfx">
+                                <rect key="frame" x="112" y="333" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UCt-8C-PYb"/>
+                    <connections>
+                        <outlet property="abvTextField" destination="zNi-Ek-wfx" id="l7M-at-bpC"/>
+                        <outlet property="addDrinkButton" destination="WEn-19-5Kx" id="na4-hU-M7h"/>
+                        <outlet property="drinkNameTextField" destination="PPc-nS-8hv" id="WpA-DW-0DI"/>
+                        <outlet property="drinkProducerTextField" destination="Nz2-bC-usD" id="8Da-9Q-2kA"/>
+                        <outlet property="segmentedControlForDrinkType" destination="7bd-vH-zJF" id="sqr-dW-xJy"/>
+                        <outlet property="styleTextField" destination="9ef-Re-VeS" id="CCP-Ok-dq7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQk-Q1-Pcn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="-351"/>
+        </scene>
+        <!--Wine Detail View Controller-->
+        <scene sceneID="tiW-uk-re7">
+            <objects>
+                <viewController id="90q-xd-E5h" customClass="WineDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gav-si-Ps8"/>
+                        <viewControllerLayoutGuide type="bottom" id="2hm-PC-Jfc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U55-rs-8mj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WINE NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sL8-gB-kcL">
+                                <rect key="frame" x="20" y="72" width="280" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winery Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2De-7e-Dgg">
+                                <rect key="frame" x="20" y="126" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount Left: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMf-bW-LAb">
+                                <rect key="frame" x="20" y="172" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGV-2w-ZWf">
+                                <rect key="frame" x="105" y="372" width="110" height="30"/>
+                                <state key="normal" title="Replenish Stock"/>
+                                <connections>
+                                    <action selector="replenishStockButtonPressed:" destination="90q-xd-E5h" eventType="touchUpInside" id="A8P-h2-Cgk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxA-CM-KuV">
+                                <rect key="frame" x="135" y="465" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <segue destination="mQf-sD-mV4" kind="unwind" unwindAction="unwindForWineDetailSegue:" id="q92-7U-kQZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isM-oY-YK2">
+                                <rect key="frame" x="162" y="172" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7S-bD-MbM">
+                                <rect key="frame" x="116" y="334" width="89" height="30"/>
+                                <state key="normal" title="Out Of Stock"/>
+                                <connections>
+                                    <action selector="outOfStockButtonPressed:" destination="90q-xd-E5h" eventType="touchUpInside" id="zwB-tG-n20"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Cr7-yk-c3I">
+                                <rect key="frame" x="113" y="264" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperPressed:" destination="90q-xd-E5h" eventType="valueChanged" id="Uat-Of-QJf"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oma-Sy-GvJ"/>
+                    <connections>
+                        <outlet property="amountLeftLabel" destination="isM-oY-YK2" id="pkO-hu-KOm"/>
+                        <outlet property="stepperForChangingStock" destination="Cr7-yk-c3I" id="MRh-et-Y7e"/>
+                        <outlet property="wineNameLabel" destination="sL8-gB-kcL" id="QTZ-13-Fwd"/>
+                        <outlet property="wineryNameLabel" destination="2De-7e-Dgg" id="rtT-XV-HDd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8a-0o-ev9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="mQf-sD-mV4" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="306"/>
+        </scene>
+        <!--Beer Detail View Controller-->
+        <scene sceneID="X50-2A-Cgc">
+            <objects>
+                <viewController id="Xg1-bo-FST" customClass="BeerDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NZR-Su-d6t"/>
+                        <viewControllerLayoutGuide type="bottom" id="DKO-gt-4tU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="coq-7O-EeJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BEER NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNY-4d-e7d">
+                                <rect key="frame" x="20" y="88" width="280" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Producer Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT1-ar-lrL">
+                                <rect key="frame" x="20" y="128" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount Left: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbW-W0-i7w">
+                                <rect key="frame" x="20" y="198" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8a-MX-2iD">
+                                <rect key="frame" x="105" y="357" width="110" height="30"/>
+                                <state key="normal" title="Replenish Stock"/>
+                                <connections>
+                                    <action selector="replenishStockButtonPressed:" destination="Xg1-bo-FST" eventType="touchUpInside" id="4vJ-he-KPN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWs-4A-n7O">
+                                <rect key="frame" x="135" y="441" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <segue destination="pku-gb-J8J" kind="unwind" unwindAction="unwindForBeerDetailSegue:" id="eTJ-Pj-FSv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ABV: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tf-6D-exl">
+                                <rect key="frame" x="20" y="157" width="280" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="yJP-fV-G6h">
+                                <rect key="frame" x="113" y="269" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperValueChanged:" destination="Xg1-bo-FST" eventType="valueChanged" id="bI5-j5-tWz"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lph-ky-2f3">
+                                <rect key="frame" x="116" y="319" width="89" height="30"/>
+                                <state key="normal" title="Out Of Stock"/>
+                                <connections>
+                                    <action selector="outOfStockButtonPressed:" destination="Xg1-bo-FST" eventType="touchUpInside" id="acQ-5g-W0z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ch9-WV-qFa"/>
+                    <connections>
+                        <outlet property="abvLabel" destination="1tf-6D-exl" id="zuX-G6-Yak"/>
+                        <outlet property="beerNameLabel" destination="XNY-4d-e7d" id="nyb-dI-9zK"/>
+                        <outlet property="breweryNameLabel" destination="kT1-ar-lrL" id="wFg-Il-T2y"/>
+                        <outlet property="stepperForChangingStock" destination="yJP-fV-G6h" id="eVk-hm-bfL"/>
+                        <outlet property="stockRemainingLabel" destination="BbW-W0-i7w" id="cOE-ZA-Ttu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7K1-lJ-QIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pku-gb-J8J" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="945"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AUk-YI-au5">
+            <objects>
+                <navigationController id="BsN-bV-Fhd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X94-6K-5tv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="M5v-LS-Z7S" kind="relationship" relationship="rootViewController" id="AwX-bm-fIw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SU9-pf-C3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="306"/>
+        </scene>
+    </scenes>
+</document>

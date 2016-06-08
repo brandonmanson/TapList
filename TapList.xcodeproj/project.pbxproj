@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94A4758F1D0739190050AFB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A4758E1D0739190050AFB9 /* main.m */; };
+		94A475921D0739190050AFB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A475911D0739190050AFB9 /* AppDelegate.m */; };
+		94A475981D0739190050AFB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A475961D0739190050AFB9 /* Main.storyboard */; };
+		94A4759A1D0739190050AFB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A475991D0739190050AFB9 /* Assets.xcassets */; };
+		94A4759D1D0739190050AFB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A4759B1D0739190050AFB9 /* LaunchScreen.storyboard */; };
+		94A475A61D07395A0050AFB9 /* TapListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A475A51D07395A0050AFB9 /* TapListTableViewController.m */; };
+		94A475AA1D07397D0050AFB9 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A475A91D07397D0050AFB9 /* Beer.m */; };
+		94A475B01D0739CA0050AFB9 /* Wine.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A475AF1D0739CA0050AFB9 /* Wine.m */; };
+		94DF906E1D07435000960F7F /* BeerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DF906D1D07435000960F7F /* BeerDetailViewController.m */; };
+		94DF90711D0748C300960F7F /* WineDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DF90701D0748C300960F7F /* WineDetailViewController.m */; };
+		94DF90751D0787DF00960F7F /* CreateBeerOrWineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DF90741D0787DF00960F7F /* CreateBeerOrWineViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		94A4758A1D0739190050AFB9 /* TapList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94A4758E1D0739190050AFB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		94A475901D0739190050AFB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		94A475911D0739190050AFB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		94A475971D0739190050AFB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94A475991D0739190050AFB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94A4759C1D0739190050AFB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		94A4759E1D0739190050AFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94A475A41D07395A0050AFB9 /* TapListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapListTableViewController.h; sourceTree = "<group>"; };
+		94A475A51D07395A0050AFB9 /* TapListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapListTableViewController.m; sourceTree = "<group>"; };
+		94A475A81D07397D0050AFB9 /* Beer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beer.h; sourceTree = "<group>"; };
+		94A475A91D07397D0050AFB9 /* Beer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beer.m; sourceTree = "<group>"; };
+		94A475AC1D0739AA0050AFB9 /* DrinkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkStatus.h; sourceTree = "<group>"; };
+		94A475AE1D0739CA0050AFB9 /* Wine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wine.h; sourceTree = "<group>"; };
+		94A475AF1D0739CA0050AFB9 /* Wine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wine.m; sourceTree = "<group>"; };
+		94DF906C1D07435000960F7F /* BeerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeerDetailViewController.h; sourceTree = "<group>"; };
+		94DF906D1D07435000960F7F /* BeerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeerDetailViewController.m; sourceTree = "<group>"; };
+		94DF906F1D0748C300960F7F /* WineDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WineDetailViewController.h; sourceTree = "<group>"; };
+		94DF90701D0748C300960F7F /* WineDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineDetailViewController.m; sourceTree = "<group>"; };
+		94DF90721D074E3300960F7F /* UpdateUserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateUserInterface.h; sourceTree = "<group>"; };
+		94DF90731D0787DF00960F7F /* CreateBeerOrWineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBeerOrWineViewController.h; sourceTree = "<group>"; };
+		94DF90741D0787DF00960F7F /* CreateBeerOrWineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBeerOrWineViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94A475871D0739190050AFB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94A475811D0739190050AFB9 = {
+			isa = PBXGroup;
+			children = (
+				94A4758C1D0739190050AFB9 /* TapList */,
+				94A4758B1D0739190050AFB9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94A4758B1D0739190050AFB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94A4758A1D0739190050AFB9 /* TapList.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94A4758C1D0739190050AFB9 /* TapList */ = {
+			isa = PBXGroup;
+			children = (
+				94A475901D0739190050AFB9 /* AppDelegate.h */,
+				94A475911D0739190050AFB9 /* AppDelegate.m */,
+				94A475AD1D0739B30050AFB9 /* Protocols */,
+				94A475AB1D0739850050AFB9 /* Models */,
+				94A475A71D0739650050AFB9 /* Controllers */,
+				94A475961D0739190050AFB9 /* Main.storyboard */,
+				94A475991D0739190050AFB9 /* Assets.xcassets */,
+				94A4759B1D0739190050AFB9 /* LaunchScreen.storyboard */,
+				94A4759E1D0739190050AFB9 /* Info.plist */,
+				94A4758D1D0739190050AFB9 /* Supporting Files */,
+			);
+			path = TapList;
+			sourceTree = "<group>";
+		};
+		94A4758D1D0739190050AFB9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94A4758E1D0739190050AFB9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94A475A71D0739650050AFB9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				94DF90731D0787DF00960F7F /* CreateBeerOrWineViewController.h */,
+				94DF90741D0787DF00960F7F /* CreateBeerOrWineViewController.m */,
+				94DF906F1D0748C300960F7F /* WineDetailViewController.h */,
+				94DF90701D0748C300960F7F /* WineDetailViewController.m */,
+				94DF906C1D07435000960F7F /* BeerDetailViewController.h */,
+				94DF906D1D07435000960F7F /* BeerDetailViewController.m */,
+				94A475A41D07395A0050AFB9 /* TapListTableViewController.h */,
+				94A475A51D07395A0050AFB9 /* TapListTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		94A475AB1D0739850050AFB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94A475A81D07397D0050AFB9 /* Beer.h */,
+				94A475A91D07397D0050AFB9 /* Beer.m */,
+				94A475AE1D0739CA0050AFB9 /* Wine.h */,
+				94A475AF1D0739CA0050AFB9 /* Wine.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		94A475AD1D0739B30050AFB9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94DF90721D074E3300960F7F /* UpdateUserInterface.h */,
+				94A475AC1D0739AA0050AFB9 /* DrinkStatus.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94A475891D0739190050AFB9 /* TapList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94A475A11D0739190050AFB9 /* Build configuration list for PBXNativeTarget "TapList" */;
+			buildPhases = (
+				94A475861D0739190050AFB9 /* Sources */,
+				94A475871D0739190050AFB9 /* Frameworks */,
+				94A475881D0739190050AFB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TapList;
+			productName = TapList;
+			productReference = 94A4758A1D0739190050AFB9 /* TapList.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94A475821D0739190050AFB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = DetroitLabs;
+				TargetAttributes = {
+					94A475891D0739190050AFB9 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 94A475851D0739190050AFB9 /* Build configuration list for PBXProject "TapList" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94A475811D0739190050AFB9;
+			productRefGroup = 94A4758B1D0739190050AFB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94A475891D0739190050AFB9 /* TapList */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94A475881D0739190050AFB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94A4759D1D0739190050AFB9 /* LaunchScreen.storyboard in Resources */,
+				94A4759A1D0739190050AFB9 /* Assets.xcassets in Resources */,
+				94A475981D0739190050AFB9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94A475861D0739190050AFB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94DF90751D0787DF00960F7F /* CreateBeerOrWineViewController.m in Sources */,
+				94A475B01D0739CA0050AFB9 /* Wine.m in Sources */,
+				94A475A61D07395A0050AFB9 /* TapListTableViewController.m in Sources */,
+				94A475921D0739190050AFB9 /* AppDelegate.m in Sources */,
+				94A4758F1D0739190050AFB9 /* main.m in Sources */,
+				94A475AA1D07397D0050AFB9 /* Beer.m in Sources */,
+				94DF906E1D07435000960F7F /* BeerDetailViewController.m in Sources */,
+				94DF90711D0748C300960F7F /* WineDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		94A475961D0739190050AFB9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94A475971D0739190050AFB9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		94A4759B1D0739190050AFB9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94A4759C1D0739190050AFB9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94A4759F1D0739190050AFB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		94A475A01D0739190050AFB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94A475A21D0739190050AFB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TapList/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.detroitlabs.TapList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		94A475A31D0739190050AFB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TapList/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.detroitlabs.TapList;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94A475851D0739190050AFB9 /* Build configuration list for PBXProject "TapList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94A4759F1D0739190050AFB9 /* Debug */,
+				94A475A01D0739190050AFB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94A475A11D0739190050AFB9 /* Build configuration list for PBXNativeTarget "TapList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94A475A21D0739190050AFB9 /* Debug */,
+				94A475A31D0739190050AFB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94A475821D0739190050AFB9 /* Project object */;
+}
